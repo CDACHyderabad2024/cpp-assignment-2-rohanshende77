@@ -1,0 +1,268 @@
+Assignment 2
+
+1)
+
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n, i, count = 0;
+    cout<<"Enter the value of N ";
+    cin>>n;
+
+    for(i=1;  i <= sqrt(n) ; i++)
+    {
+        if(n%i==0)
+        {
+            count = count +1;
+            if(n / i != i)
+            {
+                count = count +1;
+            }
+            
+        }
+    }
+    if(count == 2)
+
+        cout<<"Prime";
+    else
+    cout<<"Not Prime";
+    
+    return 0;
+}
+
+
+Output:
+
+
+Enter the value of N 7
+Prime
+
+=== Code Execution Successful ===
+
+
+Enter the value of N 9
+Not Prime
+
+=== Code Execution Successful ===
+
+
+
+2)
+
+
+
+#include<iostream>
+using namespace std;
+bool isPrime(int n)
+{
+      if(n == 1 || n == 0)
+      return false;
+      
+      for(int i = 2; i < n; i++)
+      {
+            if(n % i == 0) 
+            return false;
+      }
+      return true;
+}
+int main()
+{
+    int N;
+    cout<<"Enter the Value of N ";
+    cin>>N;
+    for(int i = 1; i <= N; i++)
+      {
+          if(isPrime(i)) 
+          {
+            cout << i << " ";
+          }
+    }
+    return 0;
+}
+
+
+Output:
+
+
+Enter the Value of N 30
+2 3 5 7 11 13 17 19 23 29 
+
+=== Code Execution Successful ===
+
+
+Enter the Value of N 100
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+
+=== Code Execution Successful ===
+
+
+
+3)
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, j, n;
+    cout<<"Enter the Value of n : ";
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            cout<<(char)('A' + j -1)<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+Output:
+
+
+Enter the Value of n : 4
+A 
+A B 
+A B C 
+A B C D 
+
+
+=== Code Execution Successful ===
+
+
+Enter the Value of n : 7
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+A B C D E F 
+A B C D E F G 
+
+
+=== Code Execution Successful ===
+
+
+4)
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+      int opt, n1, n2;
+      cout<<"Enter the first Integer : ";
+      cin>>n1;
+      cout<<"Enter the second Integer : ";
+      cin>>n2;
+ 
+      cout<<"\nInput your option :\n";
+      cout<<"1-Addition \n";
+      cout<<"2-Substraction \n";
+      cout<<"3-Multiplication \n";
+      cout<<"4-Division \n";
+      cout<<"5-Exit \n \n";
+      cin>>opt;
+ 
+      switch(opt) {
+      case 1:
+        cout<<"The Addition of "<<n1<<" and "<<n2<<" is: "<<n1+n2;
+        break;
+ 
+      case 2:
+        cout<<"The Substraction of "<<n1<<" and "<<n2<<" is: "<<n1-n2;
+        break;
+ 
+      case 3:
+        cout<<"The Multiplication of "<<n1<<" and "<<n2<<" is: "<<n1*n2;
+        break;
+ 
+      case 4:
+        if(n2==0){
+          cout<<"The second integer cannot be zero. \n";
+        } else {
+          cout<<"The Division of "<<n1<<" and "<<n2<<" is: "<<n1/n2;
+        }
+        break;
+ 
+      case 5:
+        break;
+ 
+      default:
+        cout<<"Input correct option\n";
+        break;
+    }
+}
+
+
+Output:
+
+
+Enter the first Integer : 5
+Enter the second Integer : 6
+
+Input your option :
+1-Addition 
+2-Substraction 
+3-Multiplication 
+4-Division 
+5-Exit 
+ 
+3
+The Multiplication of 5 and 6 is: 30
+
+=== Code Execution Successful ===
+
+
+5)
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int rows;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i = 1; i <= rows; ++i) {
+        for(int j = 1; j <= i; ++j) {
+            cout << j << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+
+Output:
+
+
+Enter number of rows: 4
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+
+
+=== Code Execution Successful ===
+
+
+Enter number of rows: 6
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+1 2 3 4 5 6 
+
+
+=== Code Execution Successful ===
